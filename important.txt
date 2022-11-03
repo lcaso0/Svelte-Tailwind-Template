@@ -1,0 +1,22 @@
+Website: https://tailwindcss.com/docs/guides/vite
+
+Setup Svelte tailwind css with postcss:
+1. type npm install -D tailwindcss postcss autoprefixer
+2. type npx tailwindcss init -p
+3. go to tailwind.config.cjs and type:
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{svelte,js,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+4. go to src/app.css and rename it to index.css then type:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+5. go to src/main.js and change the app.css import to index.css
+6. npm run dev and enjoy
